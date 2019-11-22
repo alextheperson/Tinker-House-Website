@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en_us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../images/icon.png" rel="icon" />
+    <title>Tinker House | FAQ</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/links.css" rel="stylesheet" type="text/css" />
+    <link href="../css/inputs.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/cb271d7bc9.js"></script>
+  </head>
+  <body>
+    <script src="../script.js"></script>
+    <div class="header">
+      <img src="../images/icon.png" class="header-img"/>
+      <h1>Tinker House</h1>
+      <a href="../index.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-home"></i>Home</a>
+      <a href="buy.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-shopping-cart"></i>Buy</a>
+      <a href="instructions.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-wrench"></i>Instructions</a>
+      <a href="about.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-book-open"></i></i>About</a>
+      <a href="" class="nav active" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-question-circle"></i>FAQ</a>
+      <a href="contact.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-paper-plane"></i>Contact</a>
+    </div>
+    <div class="cart" onclick="fold(this);">
+      <i class="fas fa-shopping-cart"></i>
+      <span id= "num">0</span>
+      <a onclick="button();" href="buy.html">Go To Cart</a>
+      &nbsp;&nbsp;
+      <a onclick="button();resetCart();" id="empty">Empty Cart</a>
+      <div class="cart-inside" id="cart">
+      </div>
+      <script>displayCart()</script>
+    </div>
+    <div class="box">
+      <h1><img src="../images/icon.png" width="25px"> Our mission</h1>
+      <hr>
+      Our mission is to help people (short and tall) learn about circitry and programing(I programed this website with a friend named Zach). I offer kits to help people learn about electonics, and hopefully there will be some more stuff comming soon. <a href="about.html">More in About</a>
+    </div>
+  </body>
+</html>

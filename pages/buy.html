@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en_us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../images/icon.png" rel="icon" />
+    <title>Tinker House | Buy</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/links.css" rel="stylesheet" type="text/css" />
+    <link href="../css/inputs.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/cb271d7bc9.js"></script>
+  </head>
+  <body>
+    <script src="../script.js"></script>
+    <div class="header">
+      <img src="../images/icon.png" class="header-img"/>
+      <h1>Tinker House</h1>
+      <a href="../index.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-home"></i>Home</a>
+      <a href="" class="nav active" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-shopping-cart"></i>Buy</a>
+      <a href="instructions.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-wrench"></i>Instructions</a>
+      <a href="about.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-book-open"></i></i>About</a>
+      <a href="faq.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-question-circle"></i>FAQ</a>
+      <a href="contact.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-paper-plane"></i>Contact</a>
+    </div>
+    <div class="cart" onclick="fold(this);">
+      <i class="fas fa-shopping-cart"></i>
+      <span id= "num">0</span>
+      <a onclick="button();" class="not-allowed">Go To Cart</a>
+      &nbsp;&nbsp;
+      <a onclick="button();resetCart();" id="empty">Empty Cart</a>
+      <div class="cart-inside" id="cart">
+      </div>
+      <script>displayCart()</script>
+    </div>
+    <div class="box">
+      <div class="grid">
+        <div class="flip-card">
+          <div class="name">
+            <b>Firefly Jar</b>
+          </div>
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../images/productImgs/fireFlyJar/pic1.jpg">
+            </div>
+            <div class="flip-card-back"> 
+              How to make the <i>Firefly Jar</i> kit.<br>
+              <button class="main" onclick="addToCart('Fire Fly Jar', 11.99)">Buy It</button><button class="main" onclick="window.location.href='product.html?product=fireFlyJar'">See Product Page</button><button class="main">Instructions</button>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="name">
+            <b>Light - O - Tron</b>
+          </div>
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../images/productImgs/light-o-tron/pic1.jpg">
+            </div>
+            <div class="flip-card-back">
+              How to make the <i>Light-O-Tron</i> kit.<br>
+              <button class="main" onclick="addToCart('Light-0-Tron', 199.99)">Buy It</button><button class="main" onclick="window.location.href='product.html?product=light-o-tron'">See Product Page</button><button class="main">Instructions</button>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="name">
+            <b>Disco Light Show</b>
+          </div>
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../images/productImgs/discoLightShow/pic1.jpg">
+            </div>
+            <div class="flip-card-back">
+              How to make the <i>Disco Light Show</i> kit.<br>
+              <button class="main" onclick="addToCart('Disco Light Show', 6.99)">Buy It</button><button class="main" onclick="window.location.href='product.html?product=discoLightShow'">See Product Page</button><button class="main">Instructions</button>
+            </div>
+          </div>
+        </div>
+        <div class="flip-card">
+          <div class="name">
+            <b>Blinkie Light Show</b>
+          </div>
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="../images/productImgs/discoLightShow/pic1.jpg">
+            </div>
+            <div class="flip-card-back">
+              How to make the <i>Blinkie Light Show</i> kit.<br>
+              <button class="main" onclick="addToCart('Disco Light Show', 15.99)">Buy It</button><button class="main" onclick="window.location.href=''">See Product Page</button><button class="main">Instructions</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

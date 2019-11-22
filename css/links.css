@@ -1,0 +1,32 @@
+.header a.nav:link {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: -10px;
+  min-width: 55px;
+  justify-content: center;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.header a.nav:visited {
+  color: black;
+}
+.header a.nav:hover, .header a.active {
+  background: var(--dark-orange);
+}
+.header a.nav:active {
+  background: var(--very-dark-orange);
+}
+
+a:link {color: var(--orange);}
+a:visited {color: var(--orange);}
+a:hover {color: var(--dark-orange);text-shadow: 0px 5px 5px var(--dark-orange)}
+a:active {color: var(--dark-blue);text-shadow: 0px 0px 0px transparent}
+
+.cart a:link {color: white;text-decoration: none;}
+.cart a:visited {color: white;text-decoration: none;}
+.cart a:hover {color: white;text-decoration: underline;text-shadow: 0px 0px 0px transparent}
+.cart a:active {color: white;text-decoration: underline;font-weight: bold;}

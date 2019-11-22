@@ -1,0 +1,108 @@
+:root {
+  --header: #f55;
+  --header-txt: #55f;
+  --background: #55f;
+  --border: #ff6;
+}
+.body {background: var(--background);padding-bottom: 10px;}
+* {box-sizing: border-box;}
+.mini-header {
+  width: 100%;
+  background: var(--header);
+  height: 100px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  color: var(--header-txt);
+  display: flex;
+  align-items: center;
+}
+.icon {
+  font-size: 10px;
+  box-shadow: 0 0 0 1em currentColor,
+    0 1em 0 1em currentColor,
+    -2.5em 1.5em 0 .5em currentColor,
+    2.5em 1.5em 0 .5em currentColor,
+    -3em -3em 0 0 currentColor,
+    3em -3em 0 0 currentColor,
+    -2em -2em 0 0 currentColor,
+    2em -2em 0 0 currentColor,
+    -3em -1em 0 0 currentColor,
+    -2em -1em 0 0 currentColor,
+    2em -1em 0 0 currentColor,
+    3em -1em 0 0 currentColor,
+    -4em 0 0 0 currentColor,
+    -3em 0 0 0 currentColor,
+    3em 0 0 0 currentColor,
+    4em 0 0 0 currentColor,
+    -5em 1em 0 0 currentColor,
+    -4em 1em 0 0 currentColor,
+    4em 1em 0 0 currentColor,
+    5em 1em 0 0 currentColor,
+    -5em 2em 0 0 currentColor,
+    5em 2em 0 0 currentColor,
+    -5em 3em 0 0 currentColor,
+    -3em 3em 0 0 currentColor,
+    3em 3em 0 0 currentColor,
+    5em 3em 0 0 currentColor,
+    -2em 4em 0 0 currentColor,
+    -1em 4em 0 0 currentColor,
+    1em 4em 0 0 currentColor,
+    2em 4em 0 0 currentColor;
+  background: currentColor;
+  width: 1em;
+  height: 1em;
+  overflow: hidden;
+  margin-left: 55px;
+  margin-right: 60px;
+  display: inline-block;
+}
+.mini-header h1 {
+  margin: 0px;
+  color: currentColor;
+}
+.mini-header button {
+  height: 100%;
+  margin: 0px;
+  margin-bottom: -5px;
+  margin-left: 10px;
+  border: 3px var(--header-txt) solid;
+  border-radius: 10px;
+  color: var(--header-txt);
+  font-size: 16px;
+  outline: none;
+  background: var(--header);
+}
+.mini-header button:last-child {border-right: 3px var(--header-txt) solid !important;}
+.mini-header button:hover {
+  color: var(--header);
+  background: var(--header-txt);
+}
+.mini-header button:active {
+  background: var(--border);
+  transform: scale(1);
+  border: 3px solid var(--border);
+  color: var(--header-txt)
+}
+.mini-header button:active:last-child {border-right: 3px var(--border) solid !important;}
+.block-holder {
+  display: flex;
+  margin: 20px auto;
+  padding: 0px;
+  width: 90%;
+}
+.article, .side-bar {
+  border-radius: 10px;
+  border: 3px solid var(--border);
+  background: white;
+  padding: 10px;
+}
+.article {
+  width: 75%;
+  margin-right: 20px;
+}
+.side-bar {
+  width: 25%;
+}
+li {height: 20px;}
+li.active,li:hover {color: var(--header)}
+.hr {border: 0px transparent none !important;border-top: 3px currentColor solid !important}

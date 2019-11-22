@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en_us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../images/icon.png" rel="icon" />
+    <title>Tinker House | Tutorials | HTML Editor</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/links.css" rel="stylesheet" type="text/css" />
+    <link href="../css/inputs.css" rel="stylesheet" type="text/css" />
+    <link href="../css/editor.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/cb271d7bc9.js"></script>
+  </head>
+  <body>
+    <script src="../script.js"></script>
+    <script src="../editor.js"></script>
+    <div class="header">
+      <img src="../images/icon.png" class="header-img"/>
+      <h1>Tinker House</h1>
+      <a href="../index.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-home"></i>Home</a>
+      <a href="../pages/buy.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-shopping-cart"></i>Buy</a>
+      <a href="../pages/instructions.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-wrench"></i>Instructions</a>
+      <a href="../pages/about.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-book-open"></i>About</a>
+      <a href="../pages/faq.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-question-circle"></i>FAQ</a>
+      <a href="../pages/contact.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-paper-plane"></i>Contact</a>
+    </div>
+    <div class="cart" onclick="fold(this);">
+      <i class="fas fa-shopping-cart"></i>
+      <span id= "num">0</span>
+      <a onclick="button();" href="buy.html">Go To Cart</a>
+      &nbsp;&nbsp;
+      <a onclick="button();resetCart();" id="empty">Empty Cart</a>
+      <div class="cart-inside" id="cart">
+      </div>
+      <script>displayCart()</script>
+    </div>
+    <script>
+      let editor = new Editor('output', 'inputHtml', 'inputCss', 'inputJs');
+    </script>
+    <div class="box" id="box">
+      <h1 class="glow-ani">Tinker House Tutorials</h1>
+      This is a place that you can type HTML and run it!
+      <div class="main">
+        <div class="buttons">
+          <button onclick="editor.switchView('HTML')">HTML</button>
+          <button onclick="editor.switchView('CSS')">CSS</button>
+          <button onclick="editor.switchView('JS')">JS</button>
+          <button onclick="editor.run(editor.add('js', 'css'))">Run</button>
+          <i class="fas fa-cog" id="control" onclick="editor.settings(this, 'settings')"></i>
+        </div>
+        <div class="settings hidden" id="settings">
+          Include: 
+          <select id="css">
+            <option>none</option>
+            <option>all</option>
+            <option>inputs.css</option>
+            <option>links.css</option>
+            <option>style.css</option>
+            <option>editor.css</option>
+          </select>
+          Include: 
+          <select id="js">
+            <option>none</option>
+            <option>all</option>
+            <option>editor.js</option>
+            <option>productDescriptionsjs</option>
+            <option>script.js</option>
+          </select>
+          <i class="fas fa-adjust" onclick="editor.theme(this, 'box')"></i>
+          <i class="fas fa-sync-alt" onclick="editor.rotation(this, 'view', 'textareas')"></i>
+        </div>
+        <div class="view" id="view">
+          <div class="textareas" id="textareas">
+            <textarea id="inputHtml" spellcheck="false" placeholder="HTML Code here..."></textarea>
+            <textarea id="inputCss" spellcheck="false" placeholder="CSS Code here..." style="display:none;"></textarea>
+            <textarea id="inputJs" spellcheck="false" placeholder="JS Code here..." style="display:none;"></textarea>
+          </div>
+          <iframe id="output"></iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

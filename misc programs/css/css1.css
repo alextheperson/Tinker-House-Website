@@ -1,0 +1,98 @@
+:root {
+  --header: #ff7000;
+  --header-txt: black;
+  --background: #f0f0f0;
+  --border: #ff7000;
+}
+.body {background: var(--background);padding-bottom: 10px;}
+* {box-sizing: border-box;}
+.mini-header {
+  width: 100%;
+  background: var(--header);
+  height: 100px;
+  padding-bottom: 5px;
+  overflow: hidden;
+  color: var(--header-txt);
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 100px;
+  height: 80px;
+  background: var(--header-txt);
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin-left: 30px;
+  margin-right: -50px;
+}
+.icon::after {
+  color: #ff7000;
+  content: "My";
+  position: absolute;
+  right: 5%;
+  top: 26px;
+  font-size: 2em;
+}
+.icon:before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 26px;
+  width: 0;
+  height: 0;
+  border-top: 13px solid transparent;
+  border-right: 26px solid var(--header-txt);
+  border-bottom: 13px solid transparent;
+}
+.mini-header h1 {
+  margin: 0px;
+  color: currentColor;
+}
+.mini-header button {
+  height: 100%;
+  margin: 0px;
+  margin-bottom: -5px;
+  margin-left: 0px;
+  color: var(--header-txt);
+  font-size: 16px;
+  background: var(--header);
+  border: 0px transparent none;
+  outline: none;
+}
+.mini-header button:last-child {border-right: 0px transparent none !important;}
+.mini-header button:hover {
+  background: #cc4000;;
+}
+.mini-header button:active {
+  background: #aa2000;
+  transform: scale(1);
+}
+.block-holder {
+  display: flex;
+  margin: 20px auto;
+  padding: 0px;
+  width: 90%;
+  flex-direction: column;
+}
+.article, .side-bar {
+  border: 1px solid var(--border);
+  background: white;
+  padding: 10px;
+}
+.article {
+  width: 100%;
+  margin-bottom: 20px;
+}
+.side-bar {
+  width: 100%;
+}
+li {height: 20px;}
+li:hover {color: #00008b}
+li.active {color: var(--border)}
+.hr {border: 0px transparent none !important;border-top: 3px #ff7000 double !important}
+a:not(.header a.nav:link):link, a:not(.header a.nav) {color: var(--orange) !important;}
+a:not(.header a.nav:visited):visited {color: var(--orange) !important;}
+a:not(.header a.nav:hover):hover {color: var(--dark-orange) !important;text-shadow: 0px 5px 5px var(--dark-orange) !important}
+a:not(.header a.nav:active):active {color: var(--dark-blue) !important;text-shadow: 0px 0px 0px transparent !important}

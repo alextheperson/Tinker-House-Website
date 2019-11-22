@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en_us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../images/icon.png" rel="icon" />
+    <title>Tinker House | Tutorials | Transistors And Logic Gates</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/links.css" rel="stylesheet" type="text/css" />
+    <link href="../css/inputs.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/cb271d7bc9.js"></script>
+  </head>
+  <body>
+    <script src="../script.js"></script>
+    <div class="header">
+      <img src="../images/icon.png" class="header-img"/>
+      <h1>Tinker House</h1>
+      <a href="../index.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-home"></i>Home</a>
+      <a href="../pages/buy.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-shopping-cart"></i>Buy</a>
+      <a href="../pages/instructions.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-wrench"></i>Instructions</a>
+      <a href="../pages/about.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-book-open"></i>About</a>
+      <a href="../pages/faq.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-question-circle"></i>FAQ</a>
+      <a href="../pages/contact.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-paper-plane"></i>Contact</a>
+    </div>
+    <div class="cart" onclick="fold(this);">
+      <i class="fas fa-shopping-cart"></i>
+      <span id= "num">0</span>
+      <a onclick="button();" href="buy.html">Go To Cart</a>
+      &nbsp;&nbsp;
+      <a onclick="button();resetCart();" id="empty">Empty Cart</a>
+      <div class="cart-inside" id="cart">
+      </div>
+      <script>displayCart()</script>
+    </div>
+    
+    <div class="box">
+      <h1 class="glow-ani">Tinker House Tutorials</h1>
+      Logic gates are the basis of all computing, you give them True(1) or False(0) and they give you True of False back. These are the basic logic gates:<br>
+      <h4>NOT Gate (&not;p)</h4>
+      <img src="../images/guide pics/logic gates/NOT.png" height="100">
+      </svg>
+      <table>
+        <tr>
+          <th>Input</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+      </table>
+      <h4>AND Gate (p&and;q)</h4>
+      <img src="../images/guide pics/logic gates/AND.png" height="100">
+      <table>
+        <tr>
+          <th>Input 1</th>
+          <th>Input 2</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+      </table>
+      <h4>OR Gate (p&or;q)</h4>
+      <img src="../images/guide pics/logic gates/OR.png" height="100">
+      </svg>
+      <table>
+        <tr>
+          <th>Input 1</th>
+          <th>Input 2</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>True</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>True</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+      </table>
+      These gates are called <i>universal logic gates</i>. This is because thes are the gates that every gate is buit of. Here are some compound gates. The <b>NAND</b> gate is a AND gate and a NOT gate, and the <b>NOR</b> gate is a OR gate with a NOT gate.
+      <h4>NAND Gate (&not;[p&and;q])</h4>
+      <img src="../images/guide pics/logic gates/NAND.png" height="100"><img src="../images/guide pics/logic gates/NAND breakdown.png" height="100" style="border-left:black 3px solid;padding-left:10px;margin-left:10px;">
+      <table>
+        <tr>
+          <th>Input 1</th>
+          <th>Input 2</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>True</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+      </table>
+      <h4>NOR Gate (&not;[p&or;q])</h4>
+      <img src="../images/guide pics/logic gates/NOR.png" height="100"><img src="../images/guide pics/logic gates/NOR breakdown.png" height="100" style="border-left:black 3px solid;padding-left:10px;margin-left:10px;">
+      <table>
+        <tr>
+          <th>Input 1</th>
+          <th>Input 2</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>True</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+      </table>
+      There is one more logic gate to learn about, the <b>XOR</b> gate stands for eXclusive Or, it is like an or gate, but it's truth table is a little different.
+      <h4>XOR Gate (p&oplus;q, &not;[p&and;q]&and;[p&or;q])</h4>
+      <img src="../images/guide pics/logic gates/XOR.png" height="100"><img src="../images/guide pics/logic gates/XOR breakdown.png" height="100" style="border-left:black 3px solid;padding-left:10px;margin-left:10px;">
+      <table>
+        <tr>
+          <th>Input 1</th>
+          <th>Input 2</th>
+          <th>Output</th>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>True</td>
+          <td><b>False</b></td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>True</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>True</td>
+          <td>False</td>
+          <td>True</td>
+        </tr>
+        <tr>
+          <td>False</td>
+          <td>False</td>
+          <td>False</td>
+        </tr>
+      </table><br>
+      <style>
+        #one {display: inline-block;}
+        #two {display: none;}
+        #one:active ~ #two {
+          display: inline-block;
+        }
+        #one:active {
+          display: none;
+        }
+      </style>
+      <h2>Transistors</h2>
+      Now, all this logic stuff is very theoretical. How do we use it in the real world? The answer is <i>Transistors</i>. Actually, this is half true. Before transistors, people had these things called vacuum tubes. They were the size of a soda can, and were what was used in the <a href="https://en.wikipedia.org/wiki/ENIAC" title="The ENIAC">room-sized computers</a>. 
+      <svg height="100" width="100" id="one" class="fa-border fa-pull-left">
+        <line x1="50" y1="0" x2="50" y2="100" style="stroke:black;stroke-width:2" />
+        <line x1="0" y1="50" x2="50" y2="50" style="stroke:black;stroke-width:2" />
+        <line x1="75" y1="0" x2="75" y2="40" style="stroke:black;stroke-width:2" />
+        <line x1="75" y1="60" x2="75" y2="100" style="stroke:black;stroke-width:2" />
+        <polyline points="80,0 90,5 80,10 90,15 80,20 90,25 80,30 90,35 80,40" style="fill:none;stroke:yellow;stroke-width:2" />
+        <text x="0" y="80">Off</text>
+      </svg>
+      <svg height="100" width="100" id="two" class="fa-border fa-pull-left">
+        <polyline points="0,45 5,55 10,45 15,55 20,45" style="fill:none;stroke:yellow;stroke-width:2" />
+        <line x1="73" y1="0" x2="73" y2="100" style="stroke:black;stroke-width:2" />
+        <line x1="23" y1="50" x2="73" y2="50" style="stroke:black;stroke-width:2" />
+        <line x1="75" y1="0" x2="75" y2="40" style="stroke:black;stroke-width:2" />
+        <line x1="75" y1="60" x2="75" y2="100" style="stroke:black;stroke-width:2" />
+        <polyline points="80,0 90,5 80,10 90,15 80,20 90,25 80,30 90,35 80,40 90,45 80,50 90,55 80,60 90,65 80,70 90,75 80,80 90,85 80,90 90,95 80,100" style="fill:none;stroke:yellow;stroke-width:2" />
+        <text x="0" y="80" fill="red">On</text>
+      </svg>
+      Back to transistors though, they can be anywhere from 0.5cm tall(minus wires) to 45 nanometers(0.0000025) big, much smaller than a soda can. The way you use transistors for this purpose<sup><a href="" onclick="">[1]</a></sup>, is like a switch.<sup>[See Left]</sup> When you apply no current to the middle lead, you can not pass electicity through the other two leads. However, when you do apply electricity to the middle lead, you can pass electricity though the right and left leads. Looking at the illustation on the left, we can see a highly stylised version of a transistor. When you click it, you will see the basic idea.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en_us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="../images/icon.png" rel="icon" />
+    <title>Tinker House | About</title>
+    <link href="../css/style.css" rel="stylesheet" type="text/css" />
+    <link href="../css/links.css" rel="stylesheet" type="text/css" />
+    <link href="../css/inputs.css" rel="stylesheet" type="text/css" />
+    <script src="https://kit.fontawesome.com/cb271d7bc9.js"></script>
+  </head>
+  <body>
+    <script src="../script.js"></script>
+    <div class="header">
+      <img src="../images/icon.png" class="header-img"/>
+      <h1>Tinker House</h1>
+      <a href="../index.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-home"></i>Home</a>
+      <a href="buy.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-shopping-cart"></i>Buy</a>
+      <a href="instructions.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-wrench"></i>Instructions</a>
+      <a href="" class="nav active" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-book-open"></i>About</a>
+      <a href="faq.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-question-circle"></i>FAQ</a>
+      <a href="contact.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-paper-plane"></i>Contact</a>
+    </div>
+    <div class="cart" onclick="fold(this);">
+      <i class="fas fa-shopping-cart"></i>
+      <span id= "num">0</span>
+      <a onclick="button();" href="buy.html">Go To Cart</a>
+      &nbsp;&nbsp;
+      <a onclick="button();resetCart();" id="empty">Empty Cart</a>
+      <div class="cart-inside" id="cart">
+      </div>
+      <script>displayCart()</script>
+    </div>
+    <div class="box">
+      <h1>What is Tinker House?</h1>
+      <h3>Our mission</h3>
+      <hr>
+      <p>Our mission is to help people (short and tall) learn about circitry and programing(I programed this website with a friend named Zach). I offer kits to help people learn about electonics, and hopefully there will be some more stuff comming soon.</p>
+      <h3>Our Story</h3>
+      <hr>
+      <p>
+        Tinker House(formerly named Circuit Circus), was started because of a craft fair. A long time ago I(Alex) was going to be participating in a craft fair. I knew I wanted to sell circuitry kits, because I thought 'why aren't there any electronics kits made by kids?' and that is why I stared Circuit Circus. The craft fair went <b>very</b> poorly but it also went kind of well. I recently found out that <i>Circuit Circus</i> is the name of a inderactive design studio, so I chnged the name to Tinker House. I also thought 'Tinker House' fit a little better. Later a friend named Zach asked if he could be a part of Tinker House and I agreed. He then went on to help with a conact response sorting program, and helped build this website.<br>
+        </p>
+      <p><b>That Is Our Story.</b></p>
+    </div>
+    <div class="box">
+      <h1>Our Team</h1>
+      <h3>Alex</h3>
+      <hr>
+      <p class="no-indent">
+        <img src="../images/profile pics/stickFigure.png" class="fa-pull-left fa-border" width="100"> Alex is a 11 year old kid(as of 2019) who speaks 中文(chinese) and english. He started Tinker House and did most of the programming for this website with <a href="https://en.wikipedia.org/wiki/HTML" title="Wikipedia.org">HTML</a>. He knows 
+        <a href="https://en.wikipedia.org/wiki/HTML" title="Wikipedia.org">HTML</a>, 
+        <a href="https://en.wikipedia.org/wiki/JavaScript" title="Wikipedia.org">JavaScript</a>, 
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" title="Wikipedia.org">CSS</a>, 
+        <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Wikipedia.org">Python</a>, and 
+        <a href="https://en.wikipedia.org/wiki/C_(programming_language)" title="Wikipedia.org">C</a>.
+      </p>
+
+      <h3 style="margin-top:70px;">Zach</h3>
+      <hr>
+      <p class="no-indent">
+        <img src="https://repl.it/public/images/languages/lolcode.svg" class="fa-pull-left fa-border" width="100"> Zach is definitly not a robot and doens't make tpyos.<sup><a href="https://en.wikipedia.org/wiki/Citation_needed">[Citation Needed]</a></sup>. He speaks English and Spanish(He doesn't speak much of it, though). He joined the project while Alex was in the middle of it . As of November 16, 2019, has only made a (non-functional) chatbot and an Internet Explorer checking system for the site. He knows 
+        <a href="https://en.wikipedia.org/wiki/HTML" title="Wikipedia.org">HTML</a>, 
+        <a href="https://en.wikipedia.org/wiki/JavaScript" title="Wikipedia.org">JavaScript</a>, 
+        <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" title="Wikipedia.org">CSS</a>, and 
+        <a href="https://en.wikipedia.org/wiki/Python_(programming_language)" title="Wikipedia.org">Python</a>.
+      </p>
+    </div>
+  </body>
+</html>

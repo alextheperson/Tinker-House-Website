@@ -1,0 +1,18 @@
+button {
+  border: 1px var(--orange) solid;
+  color: var(--orange);
+  background: transparent;
+  outline: none;
+  margin: 2.5px;
+  transition: 0.6s;
+}
+button:hover {
+  border: 1px var(--orange) solid;
+  color: var(--dark-blue);
+  background: var(--orange);
+  transition: 0.6s;
+}
+button:active {
+  transition: 0.6s;
+  transform: rotate(1turn);
+}

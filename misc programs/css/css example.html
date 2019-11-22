@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en_us">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="../../images/icon.png" rel="icon" />
+	<title>Tinker House | Misc Programs | CSS Example</title>
+	<link href="../../css/style.css" rel="stylesheet" type="text/css" />
+	<link href="../../css/links.css" rel="stylesheet" type="text/css" />
+	<script src="https://kit.fontawesome.com/cb271d7bc9.js">
+	</script>
+	<link href="css1.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<script src="../../script.js">
+	</script>
+	<div class="header">
+      <img src="../../images/icon.png" class="header-img"/>
+      <h1>Tinker House</h1>
+      <a href="../../index.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-home"></i>Home</a>
+      <a href="../../pages/buy.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-shopping-cart"></i>Buy</a>
+      <a href="../../pages/instructions.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-wrench"></i>Instructions</a>
+      <a href="../../pages/about.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-book-open"></i></i>About</a>
+      <a href="../../pages/faq.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-question-circle"></i>FAQ</a>
+      <a href="../../pages/contact.html" class="nav" onmouseover="cock(this)" onmouseout="uncock(this)"><i class="fas fa-paper-plane"></i>Contact</a>
+    </div>
+    <div class="cart" onclick="fold(this);">
+      <i class="fas fa-shopping-cart"></i>
+      <span id= "num">0</span>
+      &nbsp;
+      <a onclick="button();" href="../../pages/buy.html">Go To Cart</a>
+      &nbsp;
+      &nbsp;
+      <a onclick="button();resetCart();" id="empty">Empty Cart</a>
+      <div class="cart-inside" id="cart">
+      </div>
+      <script>displayCart()</script>
+    </div>
+    <div class="box">
+      <script>displayCart()</script>
+      <div class="body" style="border:1px black solid;">
+        <div class="mini-header">
+          <div class="icon"></div>
+          <h1 class="h1">My Website.space</h1>
+          <button onclick="changeSheet('1');">Style 1</button>
+          <button onclick="changeSheet('2');">Style 2</button>
+          <button onclick="changeSheet('3');">Style 3</button>
+          <button onclick="changeSheet('');">No Style</button>
+        </div>
+        <style>
+          .hr {
+            display: block;
+            unicode-bidi: isolate;
+            margin-block-start: 0.5em;
+            margin-block-end: 0.5em;
+            margin-inline-start: auto;
+            margin-inline-end: auto;
+            overflow: hidden;
+            border-color: #999999;
+            border-style: inset;
+            border-width: 1px;
+          }
+        </style>
+        <div class="block-holder">
+          <div class="article">
+            <h1>The Power Of CSS</h1>
+            <hr class="hr">
+            <h2>Same Page, Completely Different Looks</h2>
+            All the changes you get in this example are <b>PURELY CSS</b> meaning that the buttons are not changing the HTML at all. Yes. CSS can do this, and a <b>LOT</b> <a href="https://css-tricks.com/the-shapes-of-css/">mo</a><a href="https://css-tricks.com/drawing-images-with-css-gradients/">re</a>. Although,  did have to re-style the line. I tried to re-style it to default, but it is probably not perfect I was also unable to restyle the links(for some).
+            <h2>No CSS?</h2>
+            You <b>NEED</b> CSS, <button onclick="changeSheet('');">this</button> is why. Tap that button and go to "ugly-land". This is why CSS exists. Before CSS, your wbsite either had to look like this, or you had to use &lt;color&gt;, &lt;font&gt;, &ltblink&gt;, etc. tags!! This is why CSS is so important. Now, <a>GO LEARN IT!</a>
+          </div>
+          <div class="side-bar">
+            <ul>
+              <li class="active" id="1" onclick="changeSheet('1')">Style 1</li>
+              <li id="2" onclick="changeSheet('2');">Style 2</li>
+              <li id="3" onclick="changeSheet('3');">Style 3</li>
+              <li id="4" onclick="changeSheet('');">No Style</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

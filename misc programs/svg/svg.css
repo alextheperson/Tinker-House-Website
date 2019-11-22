@@ -1,0 +1,11 @@
+.clicked {
+  outline: #3300ff solid 1px;
+  outline-offset: 5px;
+}
+
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}

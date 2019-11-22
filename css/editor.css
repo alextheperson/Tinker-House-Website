@@ -1,0 +1,68 @@
+.box {
+  --border: black;
+}
+.box.dark {
+  --border: white;
+  background: black;
+  color: white;
+}
+.settings {
+  padding: 5px;
+  border: 1px solid var(--border);
+  margin-bottom: 5px;
+}
+.settings.hidden {
+  padding: 0px;
+  height: 0px;
+  overflow: hidden;
+  border: 0px none transparent;
+  margin-bottom: 0px
+}
+.buttons {
+  margin-bottom: 5px;
+  border: 1px solid var(--border);
+  padding: 5px
+}
+.view {
+  display: flex;
+  height: 200px;
+  padding: 5px;
+  border: 1px solid var(--border);
+}
+.view.stack {
+  flex-direction: column;
+}
+textarea {
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--border);
+  outline: none;
+  resize: none;
+}
+.textareas {
+  width: 50%;
+  height: 100%;
+  margin-right: 5px;
+}
+.textareas.stack {
+  width: 100%;
+  height: 50%;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+iframe {
+  flex-grow: 1;
+  border: 1px solid var(--border);
+  background: white;
+}
+iframe.stack {
+  height: 50%;
+}
+.flip {
+  transform: rotateY(180deg)
+}
+.flip-quarter {
+  transform: rotate(90deg)
+}
