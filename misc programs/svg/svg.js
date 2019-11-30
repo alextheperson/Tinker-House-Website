@@ -15,6 +15,9 @@ function add(obj){
   else if (obj.getElementsByTagName('select')[0].value == 'circle'){
     addCircle();
   }
+  else if (obj.getElementsByTagName('select')[0].value == 'polyline'){
+    addPolyline();
+  }
 }
 
 function addLine(){
@@ -31,6 +34,7 @@ function chooseElementLine(obj){
   whichOne = obj.id;
   document.getElementById('line').style.display = 'block';
   document.getElementById('circle').style.display = 'none';
+  document.getElementById('polyline').style.display = 'none';
   document.getElementById('x1').value = document.getElementById(whichOne).getAttribute('x1')
   document.getElementById('y1').value = document.getElementById(whichOne).getAttribute('y1')
   document.getElementById('x2').value = document.getElementById(whichOne).getAttribute('x2')
@@ -54,6 +58,7 @@ function chooseElementCircle(obj){
   whichOne = obj.id;
   document.getElementById('circle').style.display = 'block';
   document.getElementById('line').style.display = 'none';
+  document.getElementById('polyline').style.display = 'none';
   document.getElementById('cx').value = document.getElementById(whichOne).getAttribute('cx');
   document.getElementById('cy').value = document.getElementById(whichOne).getAttribute('cy');
   document.getElementById('r').value = document.getElementById(whichOne).getAttribute('r');
@@ -62,6 +67,32 @@ function chooseElementCircle(obj){
   document.getElementById('color').value = document.getElementById(whichOne).getAttribute('stroke')
   document.getElementById('width').value = document.getElementById(whichOne).style.strokeWidth
 }
+
+
+function addPolyline(){
+  let newPolyline = document.createElementNS('http://www.w3.org/2000/svg','polyline');
+  newPolyline.setAttribute('points', '5,5, 100,5, 100,20');newPolyline.setAttribute('fill', 'transparent');
+  newPolyline.setAttribute('stroke', '#ff0000');newPolyline.style.strokeWidth = '2';
+  newPolyline.setAttribute('onclick', 'click(this);chooseElementPolyline(this)');
+  newPolyline.id = 'polyline' + document.getElementById('canvas').getElementsByTagName('polyline').length;
+  document.getElementById('canvas').appendChild(newPolyline);
+}
+
+function chooseElementPolyline(obj){
+  whichOne = obj.id;
+  document.getElementById('circle').style.display = 'none';
+  document.getElementById('line').style.display = 'none';
+  document.getElementById('polyline').style.display = 'block';
+  document.getElementById('cx').value = document.getElementById(whichOne).getAttribute('cx');
+  document.getElementById('cy').value = document.getElementById(whichOne).getAttribute('cy');
+  document.getElementById('r').value = document.getElementById(whichOne).getAttribute('r');
+  document.getElementById('fill').value = document.getElementById(whichOne).getAttribute('fill');
+
+  document.getElementById('color').value = document.getElementById(whichOne).getAttribute('stroke')
+  document.getElementById('width').value = document.getElementById(whichOne).style.strokeWidth
+}
+
+
 
 function removeElement(){
   document.getElementById(whichOne).remove();
