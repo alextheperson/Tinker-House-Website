@@ -88,8 +88,8 @@ function chooseElementPolyline(obj){
   document.getElementById('r').value = document.getElementById(whichOne).getAttribute('r');
   document.getElementById('fill').value = document.getElementById(whichOne).getAttribute('fill');
 
-  document.getElementById('color').value = document.getElementById(whichOne).getAttribute('stroke')
-  document.getElementById('width').value = document.getElementById(whichOne).style.strokeWidth
+  document.getElementById('color').value = document.getElementById(whichOne).getAttribute('stroke');
+  document.getElementById('width').value = document.getElementById(whichOne).style.strokeWidth;
 }
 
 
