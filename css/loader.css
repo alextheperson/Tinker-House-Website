@@ -1,0 +1,33 @@
+.loader-box {
+  width: 360px;
+  margin: 20px auto;
+  border-top: 3px solid #ff7000;
+  border-bottom: 3px solid #0000de;
+  padding: 10px;
+}
+.house {
+  display: block;
+  animation: 3s move infinite linear 1s;
+}
+.gear {
+  display: block;
+  animation: 3s rotate infinite linear 1s;
+  margin: -15px auto 0px auto;
+  transform: rotate(10deg);
+}
+@keyframes rotate {
+  25% {
+    transform: rotate(116.666666667deg);
+  }
+  75% {
+    transform: rotate(-116.666666667deg);
+  }
+}
+@keyframes move {
+  25% {
+    transform: translate(100px);
+  }
+  75% {
+    transform: translate(-100px);
+  }
+}
