@@ -110,9 +110,9 @@ function getUrlParam(parameter, defaultvalue){
 
 function productPrint(){
   let product = getUrlParam("product", "discoLightShow");
-  document.getElementById("imgs").innerHTML = '<img src="../images/productImgs/' + product + '/pic1.jpg" class="display img">' + '<img src="../images/productImgs/' + product + '/pic2.jpg" class="display img">' + '<img src="../images/productImgs/' + product + '/pic3.jpg" class="display img">' + '<img src="../images/productImgs/' + product + '/pic4.jpg" class="display img">';
+  document.getElementById("imgs").innerHTML = '<img src="../../images/productImgs/' + product + '/pic1.jpg" class="display img">' + '<img src="../../images/productImgs/' + product + '/pic2.jpg" class="display img">' + '<img src="../../images/productImgs/' + product + '/pic3.jpg" class="display img">' + '<img src="../../images/productImgs/' + product + '/pic4.jpg" class="display img">';
   document.getElementById("desc").innerHTML = "<h1>Description Of The " + decriptions[product]["name"] + "</h1><p>" + decriptions[product]["decription"] + "<br>Price: " + decriptions[product]["price"] + "</p>";
-  document.getElementById("vide").innerHTML = '<div class="cen"><video autoplay muted loop controls height="400"><source src="../images/productImgs/' + product + '/vid.mp4" type="video/mp4">Your browser does not support HTML5 video.</video><img src="../images/productImgs/' + product + '/schematic.jpg" height="400"></div>';
+  document.getElementById("vide").innerHTML = '<div class="cen"><video autoplay muted loop controls height="400"><source src="../../images/productImgs/' + product + '/vid.mp4" type="video/mp4">Your browser does not support HTML5 video.</video><img src="../../images/productImgs/' + product + '/schematic.jpg" height="400"></div>';
   document.getElementsByTagName("title")[0].innerHTML += decriptions[product]["name"]
 }
 
